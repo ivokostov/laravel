@@ -8,8 +8,8 @@
             <nav class="nav-menu">
                 <ul class="nav">
                     <li><a href="/">Начало</a></li> 
-                    <li><a href="http://xn--80ahiflu.com/page/za-sayta">За сайта</a></li> 
-                    <li><a href="http://xn--80ahiflu.com/page/contact">Контакти</a></li>  
+                    <li><a href="{{ route('single.page', 'za-sayta') }}">За сайта</a></li> 
+                    <li><a href="{{ route('single.page', 'contact') }}">За Контакти</a></li> 
                 </ul>
             </nav>
             <a href="#" class="mennu-toggle">

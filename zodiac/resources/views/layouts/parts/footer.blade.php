@@ -9,9 +9,8 @@
                 <h3>За сайта</h3>
                 <ul>
                     <li><a href="/">Начало</a></li> 
-                    <li><a href="http://xn--80ahiflu.com/page/za-sayta">За сайта</a></li> 
-                    <li><a href="http://xn--80ahiflu.com/page/contact">Контакти</a></li>  
-                    <li><a href="http://xn--80ahiflu.com/page/privacy">Политика за поверителност</a></li>
+                    <li><a href="{{ route('single.page', 'za-sayta') }}">За сайта</a></li> 
+                    <li><a href="{{ route('single.page', 'contact') }}">За Контакти</a></li>
                 </ul>
             </div>
         </div>

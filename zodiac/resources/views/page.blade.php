@@ -4,7 +4,7 @@
 <div class="container">
     <div class="page-content">
         <h1>{{$page->title}}</h1>
-        {{$page->content}}
+        @nl2br($page->content)
     </div>
 </div>
 @endsection
