@@ -32,16 +32,21 @@ class CronController extends Controller
                 new \Tectalic\OpenAi\Models\Completions\CreateRequest([
                     'model'  => 'text-davinci-003',
                     'prompt' => $prompt,
+                    'temperature' => 0.6,
+                    'max_tokens' => 2000,
+                    'top_p' => 0
                 ])
             )->toModel();
+            echo $response->choices[0]->text;
         } catch (ClientException $e) {
             // Error response received. Retrieve the HTTP response code and response body.
             $responseBody = $handler->toArray();
             $responseCode = $handler->getResponse()->getStatusCode();
             // Handle the error...
+            dd($responseBody, $responseCode);
         }
     
-       echo $response->choices[0]->text;
+        
 
  
     }
