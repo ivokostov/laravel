@@ -18,8 +18,8 @@ class CronController extends Controller
         $text_work = $this->get_text('работен', $signs[$sign]);
         // $text_love = $this->get_text('любовен', $signs[$sign]);
         // $text_health = $this->get_text('здравен', $signs[$sign]);
-        $date = Carbon::now()->format('Y-m-d');
-        dd($text_work, $text_love, $text_health);
+        // $date = Carbon::now()->format('Y-m-d');
+        // dd($text_work, $text_love, $text_health);
     }
 
     function get_text($type, $sign) { 
