@@ -21,6 +21,6 @@ Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::get('zodiac/{zodiac}/date/{date}', [Zodiac::class, 'single'])->name('single');
 
 Route::get('/page/{page}', [PagesController::class, 'show'])->name('single.page');
-Route::get('/cron/{sign}', [CronController::class, 'store'])->name('store.sign');
+Route::get('/cron/{sign}/type/{type}', [CronController::class, 'store'])->name('store.sign');
 
 

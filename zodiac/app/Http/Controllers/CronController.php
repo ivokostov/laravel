@@ -12,10 +12,10 @@ use Carbon\Carbon;
 class CronController extends Controller
 {
  
-    function store($sign) { 
+    function store($sign, $type) { 
          
         $signs = config('constants');
-        $text_work = $this->get_text('работен', $signs[$sign]);
+        $text_work = $this->get_text($type, $signs[$sign]);
         // $text_love = $this->get_text('любовен', $signs[$sign]);
         // $text_health = $this->get_text('здравен', $signs[$sign]);
         // $date = Carbon::now()->format('Y-m-d');
@@ -24,7 +24,7 @@ class CronController extends Controller
 
     function get_text($type, $sign) { 
  
-        $templeate = 'Напиши {type} хороскоп за {sign} на български език';
+        $templeate = 'Напиши хороскоп за {sign} на български език';
         $prompt = str_replace(['{type}', '{sign}'], [$type, $sign], $templeate);
         try {
             $openaiClient = \Tectalic\OpenAi\Manager::build(new \GuzzleHttp\Client(), new \Tectalic\OpenAi\Authentication(getenv('OPENAI_API_KEY')));
